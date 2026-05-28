@@ -4,15 +4,15 @@ pipeline {
     environment {
         AWS_DEFAULT_REGION = 'ap-south-2'
         S3_BUCKET = 'krishna-codedeploy-bucket'
-        APPLICATION_NAME = 'sample-microservice-app'
-        DEPLOYMENT_GROUP = 'sample-microservice-dg'
+        APPLICATION_NAME = 'kk-sample-microservice-app'
+        DEPLOYMENT_GROUP = 'kk-sample-microservice-dg'
     }
 
     stages {
 
         stage('Clone Repository') {
             steps {
-                git 'YOUR_GITHUB_REPOSITORY_URL'
+                git 'https://github.com/krishnakumar-31/sample-micro-deploy'
             }
         }
 
