@@ -11,10 +11,11 @@ pipeline {
     stages {
 
         stage('Clone Repository') {
-            steps {
-                git 'https://github.com/krishnakumar-31/sample-micro-deploy'
-            }
-        }
+    steps {
+        git branch: 'main',
+        url: 'https://github.com/krishnakumar-31/sample-micro-deploy.git'
+    }
+  }
 
         stage('Create Deployment Package') {
             steps {
